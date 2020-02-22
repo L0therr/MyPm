@@ -62,8 +62,6 @@ fontawesome=true
 npm install --save @fortawesome/fontawesome-svg-core
 npm install --save @fortawesome/free-solid-svg-icons
 npm install --save @fortawesome/react-fontawesome
-echo -e "=== Import components \e[34m'@fortawesome/react-fontawesome' \e[0m"
-echo -e "=== Import icon \e[34m'@fortawesome/react-fontawesome' \e[0m"
 echo
 echo -e "=== Package installation \e[34mComplete\e[0m ==="
 fi
@@ -76,8 +74,6 @@ if [[ $n = "y" ]]
 then
 routerdom=true
 npm install --save react-router-dom
-echo -e "=== Import components \e[34m'@fortawesome/react-fontawesome' \e[0m"
-echo -e "=== Import icon \e[34m'@fortawesome/react-fontawesome' \e[0m"
 echo
 echo -e "=== Package installation \e[34mComplete\e[0m ==="
 fi
@@ -90,9 +86,6 @@ if [[ $n = "y" ]]
 then
 redux=true
 npm install --save redux react-redux
-echo "import {Provider} from 'react-redux';"
-echo "import {createStore, combineReducers}  from 'redux';"
-echo "const store = createStore(combineReducers({}));"
 echo
 echo -e "=== Package installation \e[34mComplete\e[0m ==="
 fi
@@ -100,7 +93,7 @@ fi
 
 
 # END
-echo -e "=== React app has been created \e[34mTO USE THOSE PACKAGES :\e[0m"
+echo -e "=== React app has been created \e[34mTO USE YOUR PACKAGES :\e[0m"
 echo "#"
 echo "#"
 
@@ -109,16 +102,7 @@ if [[ $reactapp = true ]]
 then
 echo -e "\e[33m=== For 'ReactStrap (bootstrap for React)' :\e[0m"
 echo
-echo -e "=== You need to require \e[34m'var SHA256 = require("crypto-js/sha256")'\e[0m"
-echo -e "=== You need to require \e[34m'var encBase64 = require('crypto-js/enc-base64')'\e[0m"
-echo -e "=== Crypt a password (using a salt):"
-echo
-echo "var salt = uid2(32);"
-echo "SHA256(<PASSWORD TO CRYPT> + salt).toString(encBase64)"
-echo
-echo -e "=== To generate a \e[34mToken\e[0m :"
-echo
-echo "var token = uid2(32)"
+echo -e "=== Import components \e[34m'bootstrap/dist/css/bootstrap.min.css' \e[0m"
 echo
 echo "=="
 fi
@@ -127,8 +111,32 @@ if [[ $fontawesome = true ]]
 then
 #FONTAWESOME
 echo -e "\e[33m=== For 'FontAwesome' :\e[0m"
+echo
 echo -e "=== Import components \e[34m'@fortawesome/react-fontawesome' \e[0m"
 echo -e "=== Import icon \e[34m'@fortawesome/react-fontawesome' \e[0m"
+echo
+echo "=="
+fi
+
+if [[ $routerdom = true ]]
+then
+#REACTROUTERDOM
+echo -e "\e[33m=== For 'React Router DOM' :\e[0m"
+echo
+echo -e "=== Import components \e[34m'@fortawesome/react-fontawesome' \e[0m"
+echo -e "=== Import icon \e[34m'@fortawesome/react-fontawesome' \e[0m"
+echo
+echo "=="
+fi
+
+if [[ $redux = true ]]
+then
+#REDUX
+echo -e "\e[33m=== For 'React Router DOM' :\e[0m"
+echo
+echo "import {Provider} from 'react-redux';"
+echo "import {createStore, combineReducers}  from 'redux';"
+echo "const store = createStore(combineReducers({}));"
 echo
 echo "=="
 fi
