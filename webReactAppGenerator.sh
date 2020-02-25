@@ -92,7 +92,8 @@ fi
 
 
 
-# END
+# END ====================
+
 echo -e "=== React app has been created \e[34mTO USE YOUR PACKAGES :\e[0m"
 echo "#"
 echo "#"
@@ -123,6 +124,7 @@ then
 #REACTROUTERDOM
 echo -e "\e[33m=== For 'React Router DOM' :\e[0m"
 echo
+#SITLL NEED SOME EXPLAIN ================================================================================
 echo -e "=== Import components \e[34m'@fortawesome/react-fontawesome' \e[0m"
 echo -e "=== Import icon \e[34m'@fortawesome/react-fontawesome' \e[0m"
 echo
@@ -140,9 +142,6 @@ echo "const store = createStore(combineReducers({}));"
 echo
 echo "=="
 fi
-
-
-
 
 
 echo -e "=== \e[34mEnjoy Coding !\e[0m ==="
