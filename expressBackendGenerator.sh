@@ -100,7 +100,7 @@ echo "  saveUninitialized: false,"
 echo " })"
 echo ");"
 echo
-echo "\e[33m==\e[0m"
+echo -e "\e[33m==\e[0m"
 fi
 
 
@@ -128,7 +128,7 @@ echo "        }"
 echo "    }"
 echo ");"
 echo
-echo "\e[33m==\e[0m"
+echo -e "\e[33m==\e[0m"
 fi
 
 
@@ -145,9 +145,5 @@ echo 'request("GET", "<WEBSERVICE LINK>");'
 echo
 echo -e "\e[33m=== You need to \e[34mJSON.parse\e[33m the response to read it\e[0m"
 echo
-echo "\e[33m==\e[0m"
+echo -e "\e[33m==\e[0m"
 fi
-
-
-echo -e "\e[33m=== \e[34mEnjoy Coding !\e[33m ===\e[33m"
-exit 0

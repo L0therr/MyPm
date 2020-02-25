@@ -25,3 +25,5 @@ do
         *) echo "invalid option $REPLY";;
     esac
 done
+
+echo -e "\e[33m=== \e[34mEnjoy Coding !\e[33m ===\e[0m"

@@ -125,8 +125,5 @@ echo -e "\e[33m=== To navigate through stacks :\e[0m"
 echo
 echo "onPress={() => navigation.navigate('PageA')}"
 echo
-echo "\e[33m==\e[0m"
+echo -e "\e[33m==\e[0m"
 fi
-
-
-echo -e "\e[33m=== \e[34mEnjoy Coding !\e[0m ==="

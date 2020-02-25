@@ -108,7 +108,7 @@ echo -e "\e[33m=== For 'ReactStrap (bootstrap for React)' :\e[0m"
 echo
 echo -e "\e[33m=== Import components \e[34m'bootstrap/dist/css/bootstrap.min.css' \e[0m"
 echo
-echo "\e[33m==\e[0m"
+echo -e "\e[33m==\e[0m"
 fi
 
 if [[ $fontawesome = true ]]
@@ -119,7 +119,7 @@ echo
 echo -e "\e[33m=== Import components \e[34m'@fortawesome/react-fontawesome' \e[0m"
 echo -e "\e[33m=== Import icon \e[34m'@fortawesome/react-fontawesome' \e[0m"
 echo
-echo "\e[33m==\e[0m"
+echo -e "\e[33m==\e[0m"
 fi
 
 if [[ $routerdom = true ]]
@@ -131,7 +131,7 @@ echo
 echo -e "\e[33m=== Import components \e[34m'@fortawesome/react-fontawesome' \e[0m"
 echo -e "\e[33m=== Import icon \e[34m'@fortawesome/react-fontawesome' \e[0m"
 echo
-echo "\e[33m==\e[0m"
+echo -e "\e[33m==\e[0m"
 fi
 
 if [[ $redux = true ]]
@@ -143,7 +143,7 @@ echo "import {Provider} from 'react-redux';"
 echo "import {createStore, combineReducers}  from 'redux';"
 echo "const store = createStore(combineReducers({}));"
 echo
-echo "\e[33m==\e[0m"
+echo -e "\e[33m==\e[0m"
 fi
 
 
