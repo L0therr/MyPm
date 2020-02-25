@@ -26,7 +26,7 @@ then
 session=true
 npm install express-session --save
 echo
-echo -e "=== Package installation \e[34mComplete\e[0m ==="
+echo -e "\e[33m=== Package installation \e[34mComplete\e[33m ===\e[0m"
 fi
 
 #MONGOOSE
@@ -38,7 +38,7 @@ then
 mongoose=true
 npm install mongoose --save
 echo
-echo -e "=== Package installation \e[34mComplete\e[0m ==="
+echo -e "\e[33m=== Package installation \e[34mComplete\e[33m ===\e[0m"
 fi
 
 #SYNC REQUEST
@@ -50,7 +50,6 @@ then
 sync=true
 npm install sync-request --save
 echo
-echo -e "=== You need to \e[34mJSON.parse\e[0m the response to read it"
 fi
 
 #CRYPTO
@@ -61,18 +60,18 @@ if [[ $n = "y" ]]
 then
 crypto=true
 npm install crypto-js --save 
-echo -e "=== You need to require \e[34m'var SHA256 = require("crypto-js/sha256")'\e[0m"
-echo -e "=== You need to require \e[34m'var encBase64 = require('crypto-js/enc-base64')'\e[0m"
-echo -e "=== Crypt a password (using a salt):"
+echo -e "\e[33m=== You need to require \e[34m'var SHA256 = require("crypto-js/sha256")'\e[0m"
+echo -e "\e[33m=== You need to require \e[34m'var encBase64 = require('crypto-js/enc-base64')'\e[0m"
+echo -e "\e[33m=== Crypt a password (using a salt):\e[0m"
 echo
 echo "var salt = uid2(32);"
 echo "SHA256(<PASSWORD TO CRYPT> + salt).toString(encBase64)"
 echo
-echo -e "=== To generate a \e[34mToken\e[0m :"
+echo -e "\e[33m=== To generate a \e[34mToken\e[33m :\e[0m"
 echo
 echo "var token = uid2(32)"
 echo
-echo -e "=== Package installation \e[34mComplete\e[0m ==="
+echo -e "\e[33m=== Package installation \e[34mComplete\e[33m ===\e[0m"
 fi
 
 
@@ -80,7 +79,7 @@ fi
 
 # END ====================
 
-echo -e "=== React app has been created \e[34mTO USE YOUR PACKAGES :\e[0m"
+echo -e "\e[33m=== Backend has been created \e[34mTO USE YOUR PACKAGES :\e[0m"
 echo "#"
 echo "#"
 
@@ -101,7 +100,7 @@ echo "  saveUninitialized: false,"
 echo " })"
 echo ");"
 echo
-echo "=="
+echo "\e[33m==\e[0m"
 fi
 
 
@@ -111,7 +110,7 @@ then
 echo -e "\e[33m=== For 'Mongoose' :\e[0m"
 echo
 echo -e "=== You need to require \e[34m'mongoose'\e[0m"
-echo -e "=== To link the DataBase' :"
+echo -e "=== To link the DataBase :"
 echo
 echo "var options = {"
 echo "  connectTimeoutMS: 5000,"
@@ -129,7 +128,7 @@ echo "        }"
 echo "    }"
 echo ");"
 echo
-echo "=="
+echo "\e[33m==\e[0m"
 fi
 
 
@@ -144,11 +143,11 @@ echo -e "=== Exemple of a request:"
 echo
 echo 'request("GET", "<WEBSERVICE LINK>");'
 echo
-echo "=="
+echo -e "\e[33m=== You need to \e[34mJSON.parse\e[33m the response to read it\e[0m"
+echo
+echo "\e[33m==\e[0m"
 fi
 
 
-
-
-echo "Enjoy Coding"
+echo -e "\e[33m=== \e[34mEnjoy Coding !\e[33m ===\e[33m"
 exit 0

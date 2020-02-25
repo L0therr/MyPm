@@ -3,7 +3,7 @@ echo -e "\e[36m                        ____                                     
 
 echo
 PS3='Please enter your choice: '
-options=("Create Express backend" "Create React app"  "Quit")
+options=("Create Express backend" "Create React app" "Create React Native App with Expo"  "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -13,6 +13,10 @@ do
             ;;
 	    "Create React app")
             bash webReactAppGenerator.sh
+            break
+            ;;
+        "Create React Native App with Expo")
+            bash reactNativeAppGenerator.sh
             break
             ;;
         "Quit")

@@ -12,6 +12,9 @@ fi
 
 echo -e "\e[32mSTART CREATING A REACT WEB APP named : \e[4m$projName \e[24m\e[0m"
 
+mkdir $projName
+cd $projName
+
 #if backend wanted
 echo -e "\e[33m=== Install the app with Express Backend ? [y/n]\e[0m"
 read n
@@ -25,7 +28,7 @@ bash expressBackendGenerator.sh
 
 cd backend
 
-echo -e "=== Install Modules"
+echo -e "\e[33m=== Installing Modules"
 npm i
 
 else
@@ -33,7 +36,7 @@ echo -e "=== Wrong answer"
 exit 0
 fi
 
-echo -e "=== Installing 'create-react-app' globally\e[0m"
+echo -e "\e[33m=== Installing 'create-react-app' globally\e[0m"
 npm i create-react-app --global
 
 echo -e "=== Creating project folder"
@@ -49,7 +52,7 @@ then
 reactstrap=true
 npm install --save bootstrap reactstrap
 echo
-echo -e "=== Package installation \e[34mComplete\e[0m ==="
+echo -e "\e[33m=== Package installation \e[34mComplete\e[33m ===\e[0m"
 fi
 
 #FONTAWESOME
@@ -75,7 +78,7 @@ then
 routerdom=true
 npm install --save react-router-dom
 echo
-echo -e "=== Package installation \e[34mComplete\e[0m ==="
+echo -e "\e[33m=== Package installation \e[34mComplete\e[33m ===\e[0m"
 fi
 
 #REDUX
@@ -87,14 +90,14 @@ then
 redux=true
 npm install --save redux react-redux
 echo
-echo -e "=== Package installation \e[34mComplete\e[0m ==="
+echo -e "\e[33m=== Package installation \e[34mComplete\e[33m ===\e[0m"
 fi
 
 
 
 # END ====================
 
-echo -e "=== React app has been created \e[34mTO USE YOUR PACKAGES :\e[0m"
+echo -e "\e[33m=== React app has been created \e[34mTO USE YOUR PACKAGES :\e[0m"
 echo "#"
 echo "#"
 
@@ -103,9 +106,9 @@ if [[ $reactapp = true ]]
 then
 echo -e "\e[33m=== For 'ReactStrap (bootstrap for React)' :\e[0m"
 echo
-echo -e "=== Import components \e[34m'bootstrap/dist/css/bootstrap.min.css' \e[0m"
+echo -e "\e[33m=== Import components \e[34m'bootstrap/dist/css/bootstrap.min.css' \e[0m"
 echo
-echo "=="
+echo "\e[33m==\e[0m"
 fi
 
 if [[ $fontawesome = true ]]
@@ -113,10 +116,10 @@ then
 #FONTAWESOME
 echo -e "\e[33m=== For 'FontAwesome' :\e[0m"
 echo
-echo -e "=== Import components \e[34m'@fortawesome/react-fontawesome' \e[0m"
-echo -e "=== Import icon \e[34m'@fortawesome/react-fontawesome' \e[0m"
+echo -e "\e[33m=== Import components \e[34m'@fortawesome/react-fontawesome' \e[0m"
+echo -e "\e[33m=== Import icon \e[34m'@fortawesome/react-fontawesome' \e[0m"
 echo
-echo "=="
+echo "\e[33m==\e[0m"
 fi
 
 if [[ $routerdom = true ]]
@@ -125,10 +128,10 @@ then
 echo -e "\e[33m=== For 'React Router DOM' :\e[0m"
 echo
 #SITLL NEED SOME EXPLAIN ================================================================================
-echo -e "=== Import components \e[34m'@fortawesome/react-fontawesome' \e[0m"
-echo -e "=== Import icon \e[34m'@fortawesome/react-fontawesome' \e[0m"
+echo -e "\e[33m=== Import components \e[34m'@fortawesome/react-fontawesome' \e[0m"
+echo -e "\e[33m=== Import icon \e[34m'@fortawesome/react-fontawesome' \e[0m"
 echo
-echo "=="
+echo "\e[33m==\e[0m"
 fi
 
 if [[ $redux = true ]]
@@ -140,11 +143,11 @@ echo "import {Provider} from 'react-redux';"
 echo "import {createStore, combineReducers}  from 'redux';"
 echo "const store = createStore(combineReducers({}));"
 echo
-echo "=="
+echo "\e[33m==\e[0m"
 fi
 
 
-echo -e "=== \e[34mEnjoy Coding !\e[0m ==="
+echo -e "\e[33m=== \e[34mEnjoy Coding !\e[33m ===\e[33m"
 
 
 
