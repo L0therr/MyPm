@@ -51,14 +51,26 @@ nav=true
 npm i --save react-native-gesture-handler  react-native-reanimated  react-native-screens  react-native-web  react-navigation  react-navigation-stack  react-navigation-tabs   @react-native-community/masked-view  react-native-safe-area-context
 npm i --save react-native-vector-icons
 echo
-echo -e "\e[33m=== Package installation \e[34mComplete\e[0m ==="
+echo -e "\e[33m=== Package installation \e[36mComplete\e[0m ==="
+fi
+
+#REDUX
+echo -e "\e[33m=== Install 'Redux' ? [y/n]\e[0m"
+read n
+
+if [[ $n = "y" ]]
+then
+redux=true
+npm install --save redux react-redux
+echo
+echo -e "\e[33m=== Package installation \e[36mComplete\e[33m ===\e[0m"
 fi
 
 
 
 # END ====================
 
-echo -e "\e[33m=== React Native app has been created \e[34mTO USE YOUR PACKAGES :\e[0m"
+echo -e "\e[33m=== React Native app has been created \e[36mTO USE YOUR PACKAGES :\e[0m"
 echo "#"
 echo "#"
 
@@ -67,10 +79,10 @@ if [[ $nav = true ]]
 then
 echo -e "\e[33m=== For 'React Navigation' :\e[0m"
 echo
-echo -e "\e[33m=== Import components \e[34mimport {createAppContainer } from 'react-navigation';\e[0m"
-echo -e "\e[33m=== Import bottom nav \e[34mimport {createBottomTabNavigator} from 'react-navigation-tabs';\e[0m"
-echo -e "\e[33m=== Import stack nav \e[34mimport {createStackNavigator} from 'react-navigation-stack';\e[0m"
-echo -e "\e[33m=== Import icons \e[34mimport { Ionicons } from '@expo/vector-icons';;\e[0m"
+echo -e "\e[33m=== Import components \e[36mimport {createAppContainer } from 'react-navigation';\e[0m"
+echo -e "\e[33m=== Import bottom nav \e[36mimport {createBottomTabNavigator} from 'react-navigation-tabs';\e[0m"
+echo -e "\e[33m=== Import stack nav \e[36mimport {createStackNavigator} from 'react-navigation-stack';\e[0m"
+echo -e "\e[33m=== Import icons \e[36mimport { Ionicons } from '@expo/vector-icons';;\e[0m"
 echo
 echo -e "\e[33m=== To create a bottom navigator :\e[0m"
 echo

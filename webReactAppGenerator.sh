@@ -52,7 +52,7 @@ then
 reactstrap=true
 npm install --save bootstrap reactstrap
 echo
-echo -e "\e[33m=== Package installation \e[34mComplete\e[33m ===\e[0m"
+echo -e "\e[33m=== Package installation \e[36mComplete\e[33m ===\e[0m"
 fi
 
 #FONTAWESOME
@@ -66,7 +66,7 @@ npm install --save @fortawesome/fontawesome-svg-core
 npm install --save @fortawesome/free-solid-svg-icons
 npm install --save @fortawesome/react-fontawesome
 echo
-echo -e "=== Package installation \e[34mComplete\e[0m ==="
+echo -e "=== Package installation \e[36mComplete\e[0m ==="
 fi
 
 #ReactRouterDom
@@ -78,7 +78,7 @@ then
 routerdom=true
 npm install --save react-router-dom
 echo
-echo -e "\e[33m=== Package installation \e[34mComplete\e[33m ===\e[0m"
+echo -e "\e[33m=== Package installation \e[36mComplete\e[33m ===\e[0m"
 fi
 
 #REDUX
@@ -90,14 +90,14 @@ then
 redux=true
 npm install --save redux react-redux
 echo
-echo -e "\e[33m=== Package installation \e[34mComplete\e[33m ===\e[0m"
+echo -e "\e[33m=== Package installation \e[36mComplete\e[33m ===\e[0m"
 fi
 
 
 
 # END ====================
 
-echo -e "\e[33m=== React app has been created \e[34mTO USE YOUR PACKAGES :\e[0m"
+echo -e "\e[33m=== React app has been created \e[36mTO USE YOUR PACKAGES :\e[0m"
 echo "#"
 echo "#"
 
@@ -106,7 +106,7 @@ if [[ $reactapp = true ]]
 then
 echo -e "\e[33m=== For 'ReactStrap (bootstrap for React)' :\e[0m"
 echo
-echo -e "\e[33m=== Import components \e[34m'bootstrap/dist/css/bootstrap.min.css' \e[0m"
+echo -e "\e[33m=== Import components \e[36m'bootstrap/dist/css/bootstrap.min.css' \e[0m"
 echo
 echo -e "\e[33m==\e[0m"
 fi
@@ -116,8 +116,8 @@ then
 #FONTAWESOME
 echo -e "\e[33m=== For 'FontAwesome' :\e[0m"
 echo
-echo -e "\e[33m=== Import components \e[34m'@fortawesome/react-fontawesome' \e[0m"
-echo -e "\e[33m=== Import icon \e[34m'@fortawesome/react-fontawesome' \e[0m"
+echo -e "\e[33m=== Import components \e[36m'@fortawesome/react-fontawesome' \e[0m"
+echo -e "\e[33m=== Import icon \e[36m'@fortawesome/react-fontawesome' \e[0m"
 echo
 echo -e "\e[33m==\e[0m"
 fi
@@ -128,8 +128,8 @@ then
 echo -e "\e[33m=== For 'React Router DOM' :\e[0m"
 echo
 #SITLL NEED SOME EXPLAIN ================================================================================
-echo -e "\e[33m=== Import components \e[34m'@fortawesome/react-fontawesome' \e[0m"
-echo -e "\e[33m=== Import icon \e[34m'@fortawesome/react-fontawesome' \e[0m"
+echo -e "\e[33m=== Import components \e[36m'@fortawesome/react-fontawesome' \e[0m"
+echo -e "\e[33m=== Import icon \e[36m'@fortawesome/react-fontawesome' \e[0m"
 echo
 echo -e "\e[33m==\e[0m"
 fi
@@ -147,7 +147,7 @@ echo -e "\e[33m==\e[0m"
 fi
 
 
-echo -e "\e[33m=== \e[34mEnjoy Coding !\e[33m ===\e[33m"
+echo -e "\e[33m=== \e[36mEnjoy Coding !\e[33m ===\e[33m"
 
 
 

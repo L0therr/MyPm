@@ -1,9 +1,9 @@
 #!/bin/bash
 #init simple backend with backend generator
 
-echo -e "\e[31mYou \e[32mselected \e[34mSimple Back-end\e[0m"
+echo -e "\e[31mYou \e[33mselected \e[36mSimple Back-end\e[0m"
 
-echo -e "\e[32mSTART CREATING A SIMPLE BACKEND\e[0m"
+echo -e "\e[33mSTART CREATING A SIMPLE BACKEND\e[0m"
 
 echo -e "\e[33m=== Installing express globally\e[0m"
 npm install express-generator -g
@@ -29,7 +29,7 @@ then
 session=true
 npm install express-session --save
 echo
-echo -e "\e[33m=== Package installation \e[34mComplete\e[33m ===\e[0m"
+echo -e "\e[33m=== Package installation \e[36mComplete\e[33m ===\e[0m"
 fi
 
 #MONGOOSE
@@ -41,7 +41,7 @@ then
 mongoose=true
 npm install mongoose --save
 echo
-echo -e "\e[33m=== Package installation \e[34mComplete\e[33m ===\e[0m"
+echo -e "\e[33m=== Package installation \e[36mComplete\e[33m ===\e[0m"
 fi
 
 #SYNC REQUEST
@@ -63,18 +63,19 @@ if [[ $n = "y" ]]
 then
 crypto=true
 npm install crypto-js --save 
-echo -e "\e[33m=== You need to require \e[34m'var SHA256 = require("crypto-js/sha256")'\e[0m"
-echo -e "\e[33m=== You need to require \e[34m'var encBase64 = require('crypto-js/enc-base64')'\e[0m"
+echo -e "\e[33m=== You need to require \e[36m'var SHA256 = require("crypto-js/sha256")'\e[0m"
+echo -e "\e[33m=== You need to require \e[36m'var encBase64 = require('crypto-js/enc-base64')'\e[0m"
+echo
 echo -e "\e[33m=== Crypt a password (using a salt):\e[0m"
 echo
 echo "var salt = uid2(32);"
 echo "SHA256(<PASSWORD TO CRYPT> + salt).toString(encBase64)"
 echo
-echo -e "\e[33m=== To generate a \e[34mToken\e[33m :\e[0m"
+echo -e "\e[33m=== To generate a \e[36mToken\e[33m :\e[0m"
 echo
 echo "var token = uid2(32)"
 echo
-echo -e "\e[33m=== Package installation \e[34mComplete\e[33m ===\e[0m"
+echo -e "\e[33m=== Package installation \e[36mComplete\e[33m ===\e[0m"
 echo
 fi
 
@@ -88,7 +89,7 @@ then
 fileupload=true
 npm install --save express-fileupload
 echo
-echo -e "\e[33m=== Package installation \e[34mComplete\e[33m ===\e[0m"
+echo -e "\e[33m=== Package installation \e[36mComplete\e[33m ===\e[0m"
 
 #CLOUDINARY
 echo -e "\e[33m=== Install 'cloudinary' ? (to store files getted with fileupload) [y/n]\e[0m"
@@ -99,7 +100,7 @@ then
 cloudinary=true
 npm install --save cloudinary
 echo
-echo -e "\e[33m=== Package installation \e[34mComplete\e[33m ===\e[0m"
+echo -e "\e[33m=== Package installation \e[36mComplete\e[33m ===\e[0m"
 fi
 fi
 
@@ -108,7 +109,7 @@ fi
 
 # END ====================
 
-echo -e "\e[33m=== Backend has been created \e[34mTO USE YOUR PACKAGES :\e[0m"
+echo -e "\e[33m=== Backend has been created \e[36mTO USE YOUR PACKAGES :\e[0m"
 echo "#"
 echo "#"
 
@@ -118,8 +119,9 @@ then
 #SESSION
 echo -e "\e[33m=== For 'Session' :\e[0m"
 echo
-echo -e "=== You need to require \e[34m'express-session'\e[0m"
-echo -e "=== To set the \e[34m'session'\e[0m package' :"
+echo -e "=== You need to require \e[36m'express-session'\e[0m"
+echo
+echo -e "=== To set the \e[36m'session'\e[0m package' :"
 echo
 echo "app.use("
 echo " session({" 
@@ -138,7 +140,8 @@ then
 #MONGOOSE
 echo -e "\e[33m=== For 'Mongoose' :\e[0m"
 echo
-echo -e "=== You need to require \e[34m'mongoose'\e[0m"
+echo -e "=== You need to require \e[36m'mongoose'\e[0m"
+echo
 echo -e "=== To link the DataBase :"
 echo
 echo "var options = {"
@@ -166,13 +169,13 @@ then
 #MONGOOSE
 echo -e "\e[33m=== For 'Sync-request' :\e[0m"
 echo
-echo -e "=== You need to require \e[34m'sync-request'\e[0m"
+echo -e "=== You need to require \e[36m'sync-request'\e[0m"
 echo
 echo -e "=== Exemple of a request:"
 echo
 echo 'request("GET", "<WEBSERVICE LINK>");'
 echo
-echo -e "\e[33m=== You need to \e[34mJSON.parse\e[33m the response to read it\e[0m"
+echo -e "\e[33m=== You need to \e[36mJSON.parse\e[33m the response to read it\e[0m"
 echo
 echo -e "\e[33m==\e[0m"
 fi
@@ -183,11 +186,11 @@ then
 #FILEUPLOAD
 echo -e "\e[33m=== For 'fileupload' :\e[0m"
 echo
-echo -e "\e[33m=== You need to require \e[34mvar fileUpload = require('express-fileupload');\e[0m"
-echo -e "\e[33m=== You need to require \e[34mvar uniqid = require('uniqid');\e[0m"
-echo -e "\e[33m=== You need to require \e[34mconst fs = require('fs')\e[0m"
+echo -e "\e[33m=== You need to require \e[36mvar fileUpload = require('express-fileupload');\e[0m"
+echo -e "\e[33m=== You need to require \e[36mvar uniqid = require('uniqid');\e[0m"
+echo -e "\e[33m=== You need to require \e[36mconst fs = require('fs')\e[0m"
 echo
-echo -e "\e[33m=== To set the \e[34m'fileupload'\e[33m package (in app.js) :\e[0m"
+echo -e "\e[33m=== To set the \e[36m'fileupload'\e[33m package (in app.js) :\e[0m"
 echo
 echo "app.use(fileUpload());"
 echo
@@ -223,9 +226,9 @@ then
 #CLOUDINARY
 echo -e "\e[33m=== For 'cloudinary' :\e[0m"
 echo
-echo -e "\e[33m=== You need to require \e[34mvar cloudinary = require('cloudinary').v2;\e[0m"
+echo -e "\e[33m=== You need to require \e[36mvar cloudinary = require('cloudinary').v2;\e[0m"
 echo
-echo -e "\e[33m=== To set the \e[34m'Cloudinary'\e[0m package (in app.js) :\e[0m"
+echo -e "\e[33m=== To set the \e[36m'Cloudinary'\e[0m package (in app.js) :\e[0m"
 echo
 echo "cloudinary.config({ "
 echo "  cloud_name: '[YOUR CLOUD NAME]', "
