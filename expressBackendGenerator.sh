@@ -89,6 +89,18 @@ fileupload=true
 npm install --save express-fileupload
 echo
 echo -e "\e[33m=== Package installation \e[34mComplete\e[33m ===\e[0m"
+
+#CLOUDINARY
+echo -e "\e[33m=== Install 'cloudinary' ? (to store files getted with fileupload) [y/n]\e[0m"
+read n
+
+if [[ $n = "y" ]]
+then
+cloudinary=true
+npm install --save cloudinary
+echo
+echo -e "\e[33m=== Package installation \e[34mComplete\e[33m ===\e[0m"
+fi
 fi
 
 
@@ -169,17 +181,17 @@ fi
 if [[ $fileupload = true ]]
 then
 #FILEUPLOAD
-echo -e "\e[33m=== For 'Session' :\e[0m"
+echo -e "\e[33m=== For 'fileupload' :\e[0m"
 echo
-echo -e "=== You need to require \e[34mvar fileUpload = require('express-fileupload');\e[0m"
-echo -e "=== You need to require \e[34mvar uniqid = require('uniqid');\e[0m"
-echo -e "=== You need to require \e[34mconst fs = require('fs')\e[0m"
+echo -e "\e[33m=== You need to require \e[34mvar fileUpload = require('express-fileupload');\e[0m"
+echo -e "\e[33m=== You need to require \e[34mvar uniqid = require('uniqid');\e[0m"
+echo -e "\e[33m=== You need to require \e[34mconst fs = require('fs')\e[0m"
 echo
-echo -e "=== To set the \e[34m'fileupload'\e[0m package (in app.js) :"
+echo -e "\e[33m=== To set the \e[34m'fileupload'\e[33m package (in app.js) :\e[0m"
 echo
 echo "app.use(fileUpload());"
 echo
-echo -e "=== To send a file with fecth :"
+echo -e "\e[33m=== To send a file with fecth :\e[0m"
 echo
 echo "var data = new FormData();"
 echo ""
@@ -194,13 +206,45 @@ echo "  method: 'post',"
 echo "  body: data"
 echo "})"
 echo
-echo -e "=== To get a file and save it form fecth :"
+echo -e "\e[33m=== To get a file and save it form fecth :\e[0m"
 echo
 echo "router.post('/upload', function(req, res, next) {"
 echo ""
 echo "var resultCopy = await req.files.avatar.mv('[PATH WHO NEED TO EXIST]/'+uniqid()+'.jpg');"
 echo ""
 echo "fs.unlink(imagePath);"
+echo "});"
+echo
+echo -e "\e[33m==\e[0m"
+fi
+
+if [[ $cloudinary = true ]]
+then
+#CLOUDINARY
+echo -e "\e[33m=== For 'cloudinary' :\e[0m"
+echo
+echo -e "\e[33m=== You need to require \e[34mvar cloudinary = require('cloudinary').v2;\e[0m"
+echo
+echo -e "\e[33m=== To set the \e[34m'Cloudinary'\e[0m package (in app.js) :\e[0m"
+echo
+echo "cloudinary.config({ "
+echo "  cloud_name: '[YOUR CLOUD NAME]', "
+echo "  api_key: '[YOUR API KEY]', "
+echo "  api_secret: '[YOUR API SECRET]' "
+echo "});"
+echo
+echo -e "\e[33m=== To send a file to cloudinary :\e[0m"
+echo
+echo "router.post('/upload', async function(req, res, next) {"
+echo "  "
+echo "  var resultCloudinary = await cloudinary.uploader.upload('./tmp/avatar.jpg');"
+echo "  "
+echo "  "
+echo "  "
+echo "  "
+echo "  res.json(resultCloudinary);"
+echo "  "
+echo "  "
 echo "});"
 echo
 echo -e "\e[33m==\e[0m"
