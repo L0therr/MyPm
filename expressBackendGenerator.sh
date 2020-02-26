@@ -13,6 +13,9 @@ express --view=ejs --git backend
 
 cd backend
 
+echo -e "\e[33m=== installing 'uniqid'\e[0m"
+npm install --save uniqid
+
 echo -e "\e[33m=== installing packages\e[0m"
 
 npm i
@@ -70,6 +73,20 @@ echo
 echo -e "\e[33m=== To generate a \e[34mToken\e[33m :\e[0m"
 echo
 echo "var token = uid2(32)"
+echo
+echo -e "\e[33m=== Package installation \e[34mComplete\e[33m ===\e[0m"
+echo
+fi
+
+
+#FILEUPLOAD
+echo -e "\e[33m=== Install 'fileupload' ? [y/n]\e[0m"
+read n
+
+if [[ $n = "y" ]]
+then
+fileupload=true
+npm install --save express-fileupload
 echo
 echo -e "\e[33m=== Package installation \e[34mComplete\e[33m ===\e[0m"
 fi
@@ -144,6 +161,47 @@ echo
 echo 'request("GET", "<WEBSERVICE LINK>");'
 echo
 echo -e "\e[33m=== You need to \e[34mJSON.parse\e[33m the response to read it\e[0m"
+echo
+echo -e "\e[33m==\e[0m"
+fi
+
+
+if [[ $fileupload = true ]]
+then
+#FILEUPLOAD
+echo -e "\e[33m=== For 'Session' :\e[0m"
+echo
+echo -e "=== You need to require \e[34mvar fileUpload = require('express-fileupload');\e[0m"
+echo -e "=== You need to require \e[34mvar uniqid = require('uniqid');\e[0m"
+echo -e "=== You need to require \e[34mconst fs = require('fs')\e[0m"
+echo
+echo -e "=== To set the \e[34m'fileupload'\e[0m package (in app.js) :"
+echo
+echo "app.use(fileUpload());"
+echo
+echo -e "=== To send a file with fecth :"
+echo
+echo "var data = new FormData();"
+echo ""
+echo "data.append('avatar', {"
+echo "  uri: 'file://....'',"
+echo "  type: 'image/jpeg',"
+echo "  name: 'user_avatar.jpg',"
+echo "});"
+echo ""
+echo "fetch('http://.../upload', {"
+echo "  method: 'post',"
+echo "  body: data"
+echo "})"
+echo
+echo -e "=== To get a file and save it form fecth :"
+echo
+echo "router.post('/upload', function(req, res, next) {"
+echo ""
+echo "var resultCopy = await req.files.avatar.mv('[PATH WHO NEED TO EXIST]/'+uniqid()+'.jpg');"
+echo ""
+echo "fs.unlink(imagePath);"
+echo "});"
 echo
 echo -e "\e[33m==\e[0m"
 fi
