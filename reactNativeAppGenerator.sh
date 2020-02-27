@@ -73,6 +73,8 @@ fi
 echo -e "\e[33m=== React Native app has been created \e[36mTO USE YOUR PACKAGES :\e[0m"
 echo "#"
 echo "#"
+echo -e "\e[33m=== Press enter to continue\e[0m"
+read n
 
 #NAVIGATION
 if [[ $nav = true ]]

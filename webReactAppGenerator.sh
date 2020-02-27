@@ -96,10 +96,14 @@ fi
 echo -e "\e[33m=== React app has been created \e[36mTO USE YOUR PACKAGES :\e[0m"
 echo "#"
 echo "#"
+echo -e "\e[33m=== Press enter to continue\e[0m"
+read n
 
-#REACTSTRAP
+
+
 if [[ $reactapp = true ]]
 then
+#REACTSTRAP
 echo -e "\e[33m=== For 'ReactStrap (bootstrap for React)' :\e[0m"
 echo
 echo -e "\e[33m=== Import components \e[36m'bootstrap/dist/css/bootstrap.min.css' \e[0m"
@@ -123,17 +127,13 @@ then
 #REACTROUTERDOM
 echo -e "\e[33m=== For 'React Router DOM' :\e[0m"
 echo
-#SITLL NEED SOME EXPLAIN ================================================================================
-echo -e "\e[33m=== Import components \e[36m'@fortawesome/react-fontawesome' \e[0m"
-echo -e "\e[33m=== Import icon \e[36m'@fortawesome/react-fontawesome' \e[0m"
-echo
 echo -e "\e[33m==\e[0m"
 fi
 
 if [[ $redux = true ]]
 then
 #REDUX
-echo -e "\e[33m=== For 'React Router DOM' :\e[0m"
+echo -e "\e[33m=== For 'Redux' :\e[0m"
 echo
 echo "import {Provider} from 'react-redux';"
 echo "import {createStore, combineReducers}  from 'redux';"

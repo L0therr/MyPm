@@ -95,15 +95,13 @@ echo
 echo -e "\e[33m=== Package installation \e[36mComplete\e[33m ===\e[0m"
 fi
 
-
-
-
-
 # END ====================
 
 echo -e "\e[33m=== Backend has been created \e[36mTO USE YOUR PACKAGES :\e[0m"
 echo "#"
 echo "#"
+echo -e "\e[33m=== Press enter to continue\e[0m"
+read n
 
 
 if [[ $session = true ]]
@@ -261,3 +259,6 @@ echo "});"
 echo
 echo -e "\e[33m==\e[0m"
 fi
+
+
+echo -e "\e[33m=== \e[36mEnjoy Coding !\e[33m ===\e[33m"
