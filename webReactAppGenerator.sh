@@ -30,10 +30,6 @@ cd backend
 
 echo -e "\e[33m=== Installing Modules"
 npm i
-
-else
-echo -e "=== Wrong answer"
-exit 0
 fi
 
 echo -e "\e[33m=== Installing 'create-react-app' globally\e[0m"
