@@ -66,15 +66,6 @@ npm install crypto-js --save
 echo -e "\e[33m=== You need to require \e[36m'var SHA256 = require("crypto-js/sha256")'\e[0m"
 echo -e "\e[33m=== You need to require \e[36m'var encBase64 = require('crypto-js/enc-base64')'\e[0m"
 echo
-echo -e "\e[33m=== Crypt a password (using a salt):\e[0m"
-echo
-echo "var salt = uid2(32);"
-echo "SHA256(<PASSWORD TO CRYPT> + salt).toString(encBase64)"
-echo
-echo -e "\e[33m=== To generate a \e[36mToken\e[33m :\e[0m"
-echo
-echo "var token = uid2(32)"
-echo
 echo -e "\e[33m=== Package installation \e[36mComplete\e[33m ===\e[0m"
 echo
 fi
@@ -90,6 +81,7 @@ fileupload=true
 npm install --save express-fileupload
 echo
 echo -e "\e[33m=== Package installation \e[36mComplete\e[33m ===\e[0m"
+fi
 
 #CLOUDINARY
 echo -e "\e[33m=== Install 'cloudinary' ? (to store files getted with fileupload) [y/n]\e[0m"
@@ -102,7 +94,7 @@ npm install --save cloudinary
 echo
 echo -e "\e[33m=== Package installation \e[36mComplete\e[33m ===\e[0m"
 fi
-fi
+
 
 
 
@@ -176,6 +168,23 @@ echo
 echo 'request("GET", "<WEBSERVICE LINK>");'
 echo
 echo -e "\e[33m=== You need to \e[36mJSON.parse\e[33m the response to read it\e[0m"
+echo
+echo -e "\e[33m==\e[0m"
+fi
+
+if [[ $crypto = true ]]
+then
+#CRYPTO
+echo -e "\e[33m=== For 'crypto-js' :\e[0m"
+echo
+echo -e "\e[33m=== Crypt a password (using a salt):\e[0m"
+echo
+echo "var salt = uid2(32);"
+echo "SHA256(<PASSWORD TO CRYPT> + salt).toString(encBase64)"
+echo
+echo -e "\e[33m=== To generate a \e[36mToken\e[33m :\e[0m"
+echo
+echo "var token = uid2(32)"
 echo
 echo -e "\e[33m==\e[0m"
 fi
