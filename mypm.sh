@@ -11,7 +11,9 @@ select opt in "${options[@]}"
 do
     case $opt in
         "Create Express backend")
-            bash expressBackendGenerator.sh
+            echo -e "\e[33m=== Where do you want to do that ? :\e[0m"
+            read path
+            bash expressbackendGenerator.sh $path
             break
             ;;
 	    "Create React app")

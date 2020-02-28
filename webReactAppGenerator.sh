@@ -1,10 +1,8 @@
 #!/bin/bash
 # Web app with create react app
 
-echo -e "\e[33m=== Where do you want to do that ? :\e[0m"
-read path
 
-if [[ -z "$path" ]]
+if [[ -z "$1" ]]
 then
 echo -e "\e[31mERROR: ENTER A PATH\e[0m"
 echo -e "\e[31mERROR: ENTER A PATH\e[0m"
@@ -13,7 +11,7 @@ echo
 exit 0
 fi
 
-cd $path
+cd $1
 echo
 
 echo -e "\e[93mEnter project name: "
