@@ -25,12 +25,12 @@ and your all set :)
 
 * If not (or you dont even know what it is) :
 
-* [Clone the install script (mypm-install)](http://www.dropwizard.io/1.0.2/docs/) - he will do the work
-* Then :
+[Clone the install script (mypm-install)](http://www.dropwizard.io/1.0.2/docs/) - he will do the work
+Then :
 ```
 cd [clone folder by default : mypm-installation]
 bash mypm-install.sh
 ```
-* Follow the instructions - You can delete the mypm-install clone folder.
+Follow the instructions - You can delete the mypm-install clone folder.
 
 and your all set :)
