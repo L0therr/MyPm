@@ -10,11 +10,6 @@ echo -e "\e[31mERROR: ENTER A PROJECT NAME"
 exit 0
 fi
 
-echo -e "\e[32mSTART CREATING A REACT WEB APP named : \e[4m$projName \e[24m\e[0m"
-
-mkdir $projName
-cd $projName
-
 #if backend wanted
 echo -e "\e[33m=== Install the app with Express Backend ? [y/n]\e[0m"
 read n
@@ -30,8 +25,16 @@ cd backend
 
 echo -e "\e[33m=== Installing Modules"
 npm i
+elif [[ $n = "n" ]]
+then
+mkdir $projName
+cd $projName
 fi
-
+fi
+echo
+echo -e "\e[32mSTART CREATING A REACT WEB APP named : \e[4m$projName \e[24m\e[0m"
+echo
+echo
 echo -e "\e[33m=== Installing 'create-react-app' globally\e[0m"
 npm i create-react-app --global
 
