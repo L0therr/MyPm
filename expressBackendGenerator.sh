@@ -1,21 +1,6 @@
 #!/bin/bash
 #init simple backend with backend generator
 
-echo -e "\e[33m=== Where do you want to do that ? :\e[0m"
-read path
-
-if [[ -z "$path" ]]
-then
-echo -e "\e[31mERROR: ENTER A PATH\e[0m"
-echo -e "\e[31mERROR: ENTER A PATH\e[0m"
-echo
-echo
-exit 0
-fi
-
-cd $path
-echo
-
 echo -e "\e[31mYou \e[33mselected \e[36mSimple Back-end\e[0m"
 echo
 echo -e "\e[33mCREATE A SIMPLE BACKEND AT $1 ?\e[0m"

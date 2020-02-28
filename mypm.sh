@@ -2,7 +2,10 @@
 cd ~/bin
 git pull
 echo -e "\e[36m                        ____                                                                     \n /'\_/ \               /\  _ \   /'\_/ \                                                         \n/\      \    __  __    \ \ \L\ \/\      \                                                        \n\ \ \__\ \  /\ \/\ \    \ \ ,__/\ \ \__\ \                                                       \n \ \ \_/\ \ \ \ \_\ \    \ \ \/  \ \ \_/\ \                                                      \n  \ \_\\ \_\ \/ ____ \    \ \_\   \ \_\\ \_\                                                     \n   \/_/ \/_/   /___/> \    \/_/    \/_/ \/_/                                                     \n                 /\___/                                                                          \n\e[0m"
+echo
 
+echo $1
+read w
 echo
 echo
 PS3='Please enter your choice: '
@@ -11,21 +14,15 @@ select opt in "${options[@]}"
 do
     case $opt in
         "Create Express backend")
-            echo -e "\e[33m=== Where do you want to do that ? :\e[0m"
-            read path
-            bash expressbackendGenerator.sh $path
+            bash expressbackendGenerator.sh $1
             break
             ;;
 	    "Create React app")
-            echo -e "\e[33m=== Where do you want to do that ? :\e[0m"
-            read path
-            bash webReactAppGenerator.sh $path
+            bash webReactAppGenerator.sh $1
             break
             ;;
         "Create React Native App with Expo")
-            echo -e "\e[33m=== Where do you want to do that ? :\e[0m"
-            read path
-            bash reactNativeAppGenerator.sh $path
+            bash reactNativeAppGenerator.sh $1
             break
             ;;
         "Quit")
