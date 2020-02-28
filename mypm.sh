@@ -4,7 +4,7 @@ echo
 echo
 echo
 PS3='Please enter your choice: '
-options=("Create Express backend" "Create React app" "Create React Native App with Expo"  "Quit")
+options=("Create Express backend" "Create React app" "Create React Native App with Expo" "Update Mypm" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
