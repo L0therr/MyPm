@@ -22,10 +22,10 @@ do
             ;;
         "Update Mypm")
             cd ~/bin
+            echo
+            echo
+            echo
             git pull
-            echo
-            echo
-            echo
             bash mypm.sh
             break
             ;;
