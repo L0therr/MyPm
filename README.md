@@ -59,6 +59,7 @@ bash mypm.sh
 ```
 and you can use the script :)
 Enjoy !
+##### Dont forget to do updates sometimes.
 
 
 # ps
