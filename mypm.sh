@@ -4,10 +4,21 @@ echo
 echo
 echo
 PS3='Please enter your choice: '
-options=("Create Express backend" "Create React app" "Create React Native App with Expo" "Update Mypm" "Quit")
+options=("Update Mypm" "Create Express backend" "Create React app" "Create React Native App with Expo" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
+        "Update Mypm")
+            cd ~/bin
+            echo
+            echo
+            echo
+            echo -e "\e[33m==="
+            git pull
+            echo -e "===\e[0m"
+            bash mypm.sh
+            break
+            ;;
         "Create Express backend")
             bash expressbackendGenerator.sh
             break
@@ -18,17 +29,6 @@ do
             ;;
         "Create React Native App with Expo")
             bash reactNativeAppGenerator.sh
-            break
-            ;;
-        "Update Mypm")
-            cd ~/bin
-            echo
-            echo
-            echo
-            echo -e "\e[33m==="
-            git pull
-            echo -e "===\e[0m"
-            bash mypm.sh
             break
             ;;
         "Quit")
