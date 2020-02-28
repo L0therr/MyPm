@@ -30,11 +30,6 @@ cd backend
 
 echo -e "\e[33m=== Installing Modules"
 npm i
-elif [[ $n = "n" ]]
-then
-mkdir $projName
-cd $projName
-fi
 fi
 
 echo -e "\e[33m=== Installing 'create-react-app' globally\e[0m"
