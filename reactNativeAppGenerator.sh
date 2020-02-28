@@ -2,6 +2,17 @@
 # Web app with expo
 # doc = https://docs.expo.io/
 
+if [[ -z "$1" ]]
+then
+echo -e "\e[31mERROR: ENTER A PATH\e[0m"
+echo -e "\e[31mERROR: ENTER A PATH\e[0m"
+echo
+echo
+exit 0
+fi
+
+cd $1
+
 echo -e "\e[93mEnter project name: "
 read projName
 

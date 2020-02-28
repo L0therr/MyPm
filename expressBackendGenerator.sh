@@ -1,9 +1,20 @@
 #!/bin/bash
 #init simple backend with backend generator
 
-echo -e "\e[31mYou \e[33mselected \e[36mSimple Back-end\e[0m"
+if [[ -z "$1" ]]
+then
+echo -e "\e[31mERROR: ENTER A PATH\e[0m"
+echo -e "\e[31mERROR: ENTER A PATH\e[0m"
+echo
+echo
+exit 0
+fi
 
-echo -e "\e[33mSTART CREATING A SIMPLE BACKEND\e[0m"
+cd $1
+
+echo -e "\e[31mYou \e[33mselected \e[36mSimple Back-end\e[0m"
+echo
+echo -e "\e[33mCREATE A SIMPLE BACKEND AT $1 ?\e[0m"
 
 echo -e "\e[33m=== Installing express globally\e[0m"
 npm install express-generator -g
