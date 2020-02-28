@@ -15,7 +15,7 @@ Start now using mypm :)
 * You need to be a cool dude (joking)
 
 ## Installation
-### for windows
+### For windows
 
 * If you dont have a ~/bin folder (or you dont even know what it is) :
 
@@ -40,6 +40,17 @@ rm -rf [clone folder name]
 ```
 and your all set :)
 
+
+### For Mac OS
+```
+cd /usr/local/bin
+git clone https://github.com/L0therr/MyPm.git
+cd [clone folder name]
+mv * ../
+cd ..
+rm -rf [clone folder name]
+```
+and your all set :) (I think i dont have a mac...sry)
 
 # Using
 Everywhere on your shell terminal you can run :
