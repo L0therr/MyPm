@@ -35,6 +35,7 @@ then
 mkdir $projName
 cd $projName
 fi
+fi
 
 echo -e "\e[33m=== Installing 'create-react-app' globally\e[0m"
 npm i create-react-app --global
