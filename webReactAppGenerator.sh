@@ -30,14 +30,18 @@ cd backend
 
 echo -e "\e[33m=== Installing Modules"
 npm i
+elif [[ $n = "n" ]]
+then
+mkdir $projName
+cd $projName
 fi
 
 echo -e "\e[33m=== Installing 'create-react-app' globally\e[0m"
 npm i create-react-app --global
 
 echo -e "=== Creating project folder"
-create-react-app $projName
-cd $projName
+create-react-app reactapp
+cd reactapp
 
 #REACTSTRAP
 echo -e "\e[33m=== Install 'ReactStrap (bootstrap for React)' ? [y/n]\e[0m"
