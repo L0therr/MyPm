@@ -25,7 +25,9 @@ do
             echo
             echo
             echo
+            echo -e "\e[33m==="
             git pull
+            echo -e "===\e[0m"
             bash mypm.sh
             break
             ;;
