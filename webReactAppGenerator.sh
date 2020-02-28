@@ -30,7 +30,6 @@ then
 mkdir $projName
 cd $projName
 fi
-fi
 echo
 echo -e "\e[32mSTART CREATING A REACT WEB APP named : \e[4m$projName \e[24m\e[0m"
 echo
