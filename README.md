@@ -9,7 +9,9 @@ Start now using mypm :)
 
 ## Prerequisites
 * Git need to be installed on your computer
+  [Git link](https://git-scm.com/downloads)
 * Node.js need to be installed on your computer
+  [Node link](https://nodejs.org/en/)
 * You need to be a cool dude (joking)
 
 ## Installation
