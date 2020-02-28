@@ -2,8 +2,8 @@
 #init simple backend with backend generator
 
 echo -e "\e[31mYou \e[33mselected \e[36mSimple Back-end\e[0m"
-echo
-echo -e "\e[33mCREATE A SIMPLE BACKEND AT $1 ?\e[0m"
+
+echo -e "\e[33mSTART CREATING A SIMPLE BACKEND\e[0m"
 
 echo -e "\e[33m=== Installing express globally\e[0m"
 npm install express-generator -g
