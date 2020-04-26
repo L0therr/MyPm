@@ -19,7 +19,7 @@ Start now using mypm :)
 
 * If you dont have a ~/bin folder (or you dont even know what it is) :
 
-[Clone the install script (mypm-install)](https://github.com/L0therr/mypm-installation) - he will do the work
+[Clone and execute the install script (mypm-install)](https://github.com/L0therr/mypm-installation) - he will do the work
 Then :
 ```
 cd [clone folder by default : mypm-installation]
