@@ -141,22 +141,3 @@ echo "const store = createStore(combineReducers({}));"
 echo
 echo -e "\e[33m==\e[0m"
 fi
-
-
-echo -e "\e[33m=== \e[36mEnjoy Coding !\e[33m ===\e[33m"
-
-
-
-
-##rename backend folder
-# if [[ $backend = true ]]
-# then
-# cd ..
-# cd ..
-# mkdir $projName
-# cd backend
-# mv * ../$projName
-# else
-# cd ..
-# mv reactapp $projName
-# fi
