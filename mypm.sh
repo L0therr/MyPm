@@ -38,5 +38,5 @@ do
     esac
 done
 
-echo -e "\e[33m=== Dont forget to \e[36mUpdate\e[33m Mypm some times ===\e[0m"
+echo -e "\e[33m=== Dont forget to \e[36mUpdate\e[33m Mypm sometimes ===\e[0m"
 echo -e "\e[33m=== \e[36mEnjoy Coding !\e[33m ===\e[0m"
