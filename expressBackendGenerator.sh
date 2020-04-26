@@ -259,6 +259,3 @@ echo "});"
 echo
 echo -e "\e[33m==\e[0m"
 fi
-
-
-echo -e "\e[33m=== \e[36mEnjoy Coding !\e[33m ===\e[33m"
